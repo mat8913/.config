@@ -27,4 +27,7 @@ set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 set laststatus=2
 set noshowmode
 set background=dark
+let g:solarized_termtrans = 1
 colorscheme solarized
+autocmd FileType make setlocal noexpandtab
+let g:syntastic_d_include_dirs = [ '~/d/Derelict3/import/', 'src' ]
