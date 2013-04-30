@@ -9,9 +9,10 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
                     , Run Swap [] 10
                     , Run Date "%a %b %_d %Y %I:%M:%S%p" "date" 10
                     , Run Mail [("inbox", "~/Mail")] "mail"
+                    , Run Mail [("youtube", "~/GMail/youtube")] "mail-youtube"
                     , Run Com "acpi" ["-b"] "battery" 10
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%multicpu% | %memory% * %swap% | %wlan0% }{ <fc=#ee9a00>%date%</fc>| %mail% | %battery%"
+       , template = "%multicpu% | %memory% * %swap% | %wlan0% }{ <fc=#ee9a00>%date%</fc>| %mail% %mail-youtube% | %battery%"
        }
