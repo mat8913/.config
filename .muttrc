@@ -1,0 +1,13 @@
+set realname = "Matthew Bekkema"
+
+set smtp_url = "smtp://mat8913ftw@smtp.gmail.com:587/"
+source ~/.muttconfs/passwd
+set from = "mat8913ftw@gmail.com"
+
+set folder = "~/GMail"
+set spoolfile = "~/Mail"
+
+set certificate_file=~/.mutt/certificates
+
+set move = no
+set imap_keepalive = 900
