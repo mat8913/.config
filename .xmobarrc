@@ -11,9 +11,10 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
                     , Run Mail [("inbox", "~/Mail")] "mail"
                     , Run Mail [("debian-devel", "~/GMail/debian-devel")] "mail-debian-devel"
                     , Run Mail [("youtube", "~/GMail/youtube")] "mail-youtube"
-                    , Run Com "acpi" ["-b"] "battery" 10
+                    , Run Com "~/battery.sh" [""] "battery" 10
+                    , Run Com "~/sensors.sh" [""] "sensors" 10
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%multicpu% | %memory% * %swap% | %wlan0% }{ <fc=#ee9a00>%date%</fc>| %mail% %mail-debian-devel% %mail-youtube% | %battery%"
+       , template = "%multicpu% | %memory% * %swap% | %wlan0% | %sensors% }{ <fc=#ee9a00>%date%</fc>| %mail% %mail-debian-devel% %mail-youtube% | %battery%"
        }
