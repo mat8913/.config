@@ -1,0 +1,14 @@
+[retriever]
+type = SimpleIMAPSSLRetriever
+server = imap.gmail.com
+username = mat8913ftw@gmail.com
+mailboxes = ("Inbox",)
+
+[destination]
+type = Maildir
+path = ~/Mail/
+
+[options]
+received = false
+delivered_to = false
+read_all = false
