@@ -12,22 +12,38 @@ syntax on
 :command W w
 :command Q q
 set autoindent
-"set showcmd
 set hlsearch
 nore ; :
 nore , ;
 set tabstop=4
 set shiftwidth=4
 set expandtab
-call pathogen#infect()
-let g:syntastic_mode_map = { 'mode': 'active' }
-let g:syntastic_c_checkers = ['gcc']
-set directory=~/.vim/tmp
-set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 set laststatus=2
 set noshowmode
 set background=dark
+autocmd FileType make setlocal noexpandtab
+
+" Plugins
+call pathogen#infect()
+
+set directory=~/.vim/tmp
+
+let g:syntastic_mode_map = { 'mode': 'active' }
+let g:syntastic_c_checkers = ['gcc']
+let g:syntastic_d_include_dirs = [ '~/d/Derelict3/import/', 'src' ]
+
+set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+
 let g:solarized_termtrans = 1
 colorscheme solarized
-autocmd FileType make setlocal noexpandtab
-let g:syntastic_d_include_dirs = [ '~/d/Derelict3/import/', 'src' ]
+
+nnoremap <F5> :GundoToggle<CR>
+
+
+" Plugin list:
+"   * Pathogen
+"   * Syntastic
+"   * Powerline
+"   * Solarized
+"   * Fugitive
+"   * Gundo
