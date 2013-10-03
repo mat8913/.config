@@ -15,13 +15,16 @@ set autoindent
 set hlsearch
 nore ; :
 nore , ;
-set tabstop=4
-set shiftwidth=4
-set expandtab
+set tabstop=8
+set softtabstop=8
+set shiftwidth=8
+set noexpandtab
 set laststatus=2
 set noshowmode
 set background=dark
 autocmd FileType make setlocal noexpandtab
+set list
+set listchars=tab:▸\ ,trail:.
 
 " Plugins
 call pathogen#infect()
