@@ -5,6 +5,7 @@ cd "$HOME"
 mkdir -p ".config/Terminal"
 mkdir -p ".vim/tmp"
 mkdir -p ".xmonad/"
+mkdir -p ".mpd/"
 
 ln -s "$DOTFILES/.gitconfig"
 ln -s "$DOTFILES/.mpdconf"
@@ -17,7 +18,7 @@ ln -s "$DOTFILES/xmonad.hs" ".xmonad/"
 
 pip install --user git+git://github.com/Lokaltog/powerline
 mkdir -p ".fonts"
-cd "fonts"
+cd ".fonts"
 wget "https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf"
 fc-cache -vf "$HOME"/.fonts
 mkdir -p "$HOME"/.config/fontconfig/conf.d/
@@ -42,5 +43,26 @@ if [ ! -d "vim-colors-solarized" ]; then\
 	git clone "git://github.com/altercation/vim-colors-solarized.git"
 fi
 cd "vim-colors-solarized"
+git pull
+cd "$HOME/.vim/bundle"
+
+if [ ! -d "syntastic" ]; then\
+	git clone "git://github.com/scrooloose/syntastic.git"
+fi
+cd "syntastic"
+git pull
+cd "$HOME/.vim/bundle"
+
+if [ ! -d "vim-fugitive" ]; then\
+	git clone "git://github.com/tpope/vim-fugitive"
+fi
+cd "vim-fugitive"
+git pull
+cd "$HOME/.vim/bundle"
+
+if [ ! -d "gundo.vim" ]; then\
+	git clone "git://github.com/sjl/gundo.vim"
+fi
+cd "gundo.vim"
 git pull
 cd "$HOME/.vim/bundle"
