@@ -15,6 +15,7 @@ ln -s "$DOTFILES/.vimrc"
 ln -s "$DOTFILES/.xinitrc" ".xsession"
 ln -s "$DOTFILES/.xmobarrc.$(hostname)" ".xmobarrc"
 ln -s "$DOTFILES/xmonad.hs" ".xmonad/"
+ln -s "$DOTFILES/.bash_aliases"
 
 pip install --user git+git://github.com/Lokaltog/powerline
 mkdir -p ".fonts"
