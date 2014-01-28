@@ -20,11 +20,11 @@ ln -s "$DOTFILES/.bash_aliases"
 pip install --user git+git://github.com/Lokaltog/powerline
 mkdir -p ".fonts"
 cd ".fonts"
-wget "https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf"
+wget "https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf" -O "PowerlineSymbols.otf"
 fc-cache -vf "$HOME"/.fonts
 mkdir -p "$HOME"/.config/fontconfig/conf.d/
 cd "$HOME"/.config/fontconfig/conf.d/
-wget "https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf"
+wget "https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf" -O "10-powerline-symbols.conf"
 cd "$HOME"
 
 cd ".vim"
