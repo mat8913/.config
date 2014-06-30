@@ -6,6 +6,7 @@ mkdir -p ".config/Terminal"
 mkdir -p ".vim/tmp"
 mkdir -p ".xmonad/"
 mkdir -p ".mpd/"
+mkdir -p "bin/"
 
 ln -s "$DOTFILES/.gitconfig"
 ln -s "$DOTFILES/.mpdconf"
@@ -16,6 +17,7 @@ ln -s "$DOTFILES/.xinitrc" ".xsession"
 ln -s "$DOTFILES/.xmobarrc.$(hostname)" ".xmobarrc"
 ln -s "$DOTFILES/xmonad.hs" ".xmonad/"
 ln -s "$DOTFILES/.bash_aliases"
+ln -s "$DOTFILES/bin/togglemute.sh" "bin/"
 
 pip install --user git+git://github.com/Lokaltog/powerline
 mkdir -p ".fonts"
