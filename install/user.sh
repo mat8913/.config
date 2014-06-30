@@ -7,6 +7,7 @@ mkdir -p ".vim/tmp"
 mkdir -p ".xmonad/"
 mkdir -p ".mpd/"
 mkdir -p "bin/"
+mkdir -p ".mpv/"
 
 ln -s "$DOTFILES/.gitconfig"
 ln -s "$DOTFILES/.mpdconf"
@@ -19,6 +20,7 @@ ln -s "$DOTFILES/xmonad.hs" ".xmonad/"
 ln -s "$DOTFILES/.bash_aliases"
 ln -s "$DOTFILES/bin/togglemute.sh" "bin/"
 ln -s "$DOTFILES/.xbindkeysrc"
+ln -s "$DOTFILES/mpvconfig" ".mpv/config"
 
 pip install --user git+git://github.com/Lokaltog/powerline
 mkdir -p ".fonts"
