@@ -1,2 +1,3 @@
+xbindkeys
 xmobar &
-xmonad 
+xmonad
