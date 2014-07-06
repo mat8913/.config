@@ -19,3 +19,4 @@ redshift
 python-pip
 alsa-utils
 xscreensaver
+trayer
