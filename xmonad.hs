@@ -11,5 +11,5 @@ varLayout = layoutHook defaultConfig
 main = do
     xmonad $ defaultConfig
         { manageHook = manageDocks <+> manageHook defaultConfig
-        , layoutHook = avoidStruts $ smartBorders varLayout
+        , layoutHook = smartBorders ( avoidStruts varLayout ||| Full )
         }
