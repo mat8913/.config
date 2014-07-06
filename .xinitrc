@@ -1,3 +1,4 @@
 xbindkeys
 xmobar &
+xscreensaver &
 xmonad
