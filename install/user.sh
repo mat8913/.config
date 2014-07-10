@@ -21,6 +21,8 @@ ln -s "$DOTFILES/.bash_aliases"
 ln -s "$DOTFILES/bin/togglemute.sh" "bin/"
 ln -s "$DOTFILES/bin/single_crc.sh" "bin/"
 ln -s "$DOTFILES/bin/all_crc.sh" "bin/"
+ln -s "$DOTFILES/bin/is_number" "bin/"
+ln -s "$DOTFILES/bin/passman.sh" "bin/"
 ln -s "$DOTFILES/.xbindkeysrc"
 ln -s "$DOTFILES/mpvconfig" ".mpv/config"
 
