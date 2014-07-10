@@ -19,6 +19,8 @@ ln -s "$DOTFILES/.xmobarrc.$(hostname)" ".xmobarrc"
 ln -s "$DOTFILES/xmonad.hs" ".xmonad/"
 ln -s "$DOTFILES/.bash_aliases"
 ln -s "$DOTFILES/bin/togglemute.sh" "bin/"
+ln -s "$DOTFILES/bin/single_crc.sh" "bin/"
+ln -s "$DOTFILES/bin/all_crc.sh" "bin/"
 ln -s "$DOTFILES/.xbindkeysrc"
 ln -s "$DOTFILES/mpvconfig" ".mpv/config"
 
