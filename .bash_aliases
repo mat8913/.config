@@ -13,3 +13,8 @@ alias colcor="redshift -l -33.9900016784668:150.884429931641"
 alias hibernate="dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Hibernate"
 alias suspend="dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Suspend"
 alias httpd-python="python -m SimpleHTTPServer"
+alias grep="grep --color=auto"
+
+DEBEMAIL="mbekkema97@gmail.com"
+DEBFULLNAME="Matthew Bekkema"
+export DEBEMAIL DEBFULLNAME
