@@ -20,3 +20,5 @@ python-pip
 alsa-utils
 xscreensaver
 trayer
+gmrun
+xbindkeys
