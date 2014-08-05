@@ -42,6 +42,8 @@ colorscheme solarized
 
 nnoremap <F5> :GundoToggle<CR>
 
+set guioptions-=L
+set guioptions-=r
 
 " Plugin list:
 "   * Pathogen
