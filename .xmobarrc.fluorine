@@ -10,8 +10,9 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
                     , Run Date "%a %b %_d %Y %I:%M:%S%p" "date" 10
                     , Run Com "acpi" ["-b"] "battery" 10
                     , Run Com "/home/matthew/bin/fan_speed.sh" [""] "fan" 10
+                    , Run Kbd [("us(dvorak)", "dvorak"), ("us", "us")]
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%multicpu% | %memory% * %swap% * %fan% | %wlan0% }{ %battery% | <fc=#ee9a00>%date%</fc>"
+       , template = "%multicpu% | %memory% * %swap% * %fan% | %wlan0% | %kbd% }{ %battery% | <fc=#ee9a00>%date%</fc>"
        }
