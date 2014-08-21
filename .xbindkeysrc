@@ -12,9 +12,3 @@
 
 "xscreensaver-command -lock"
     Mod4 + l
-
-"setxkbmap -layout us -option caps:backspace"
-    Mod4 + h
-
-"setxkbmap -layout dvorak -option caps:backspace"
-    Mod4 + j
