@@ -11,8 +11,9 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
                     , Run Com "acpi" ["-b"] "battery" 10
                     , Run Com "/home/matthew/bin/fan_speed.sh" [""] "fan" 10
                     , Run Kbd [("us(dvorak)", "dvorak"), ("us", "us")]
+                    , Run DiskU [("/", "Free disk: <free>")] [] 20
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%multicpu% | %memory% * %swap% * %fan% | %wlan0% | %kbd% }{ %battery% | <fc=#ee9a00>%date%</fc>"
+       , template = "%multicpu% | %memory% * %swap% * %fan% | %disku% | %wlan0% | %kbd% }{ %battery% | <fc=#ee9a00>%date%</fc>"
        }

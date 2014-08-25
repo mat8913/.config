@@ -9,8 +9,9 @@ Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
                     , Run Swap [] 10
                     , Run Date "%a %b %_d %Y %I:%M:%S%p" "date" 10
                     , Run Kbd [("us(dvorak)", "dvorak"), ("us", "us")]
+                    , Run DiskU [("/home", "Free disk: <free>")] [] 20
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%multicpu% | %memory% * %swap% | %eth1% | %kbd% }{ <fc=#ee9a00>%date%</fc>"
+       , template = "%multicpu% | %memory% * %swap% | %disku% | %eth1% | %kbd% }{ <fc=#ee9a00>%date%</fc>"
        }
