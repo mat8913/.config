@@ -22,9 +22,14 @@ set noexpandtab
 set laststatus=2
 set noshowmode
 set background=dark
-autocmd FileType make setlocal noexpandtab
 set list
 set listchars=tab:▸\ ,trail:.
+
+" File specific options
+autocmd FileType make setlocal noexpandtab
+autocmd FileType markdown setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab textwidth=80 spell
+autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab textwidth=79
+autocmd FileType gitcommit setlocal spell
 
 " Plugins
 call pathogen#infect()
