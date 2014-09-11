@@ -1,10 +1,13 @@
 #!/bin/bash
-if [ $# -ne 1 ]; then
+if [ $# -lt 1 ]; then
 	echo Requires filename
-	exit
+	exit 1
 fi
-WANTED_CRC=$(echo "$1" | grep -o -E '[a-fA-F0-9]{8}' | tail -n 1)
-ACTUAL_CRC=$(cksfv "$1" | tail -c 9)
-if [ x"$WANTED_CRC" != x"$ACTUAL_CRC" ]; then
-	echo $1 shall not pass
-fi
+
+for i in "$@"; do\
+	WANTED_CRC=$(echo "$i" | grep -o -E '[a-fA-F0-9]{8}' | tail -n 1)
+	ACTUAL_CRC=$(cksfv "$i" | tail -c 9)
+	if [ x"$WANTED_CRC" != x"$ACTUAL_CRC" ]; then
+		echo $i shall not pass
+	fi
+done
