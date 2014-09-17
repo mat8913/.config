@@ -29,7 +29,7 @@ set listchars=tab:▸\ ,trail:.
 autocmd FileType make setlocal noexpandtab
 autocmd FileType markdown setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab textwidth=80 spell
 autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab textwidth=79
-autocmd FileType gitcommit setlocal spell
+autocmd FileType gitcommit setlocal textwidth=72 spell
 
 " Plugins
 call pathogen#infect()
