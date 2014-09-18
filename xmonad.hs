@@ -4,9 +4,10 @@ import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
+import XMonad.Layout.FixedColumn
 import System.IO
 
-varLayout = layoutHook defaultConfig
+varLayout = layoutHook defaultConfig ||| FixedColumn 1 1 85 10
 
 main = do
     xmonad $ defaultConfig
