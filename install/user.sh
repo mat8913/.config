@@ -2,6 +2,7 @@
 DOTFILES="$HOME/dotfiles"
 cd "$HOME"
 
+# Make directories
 mkdir -p ".config/Terminal"
 mkdir -p ".vim/tmp"
 mkdir -p ".xmonad/"
@@ -9,23 +10,29 @@ mkdir -p ".mpd/"
 mkdir -p "bin/"
 mkdir -p ".mpv/"
 
+# Link ~/*
 ln -s "$DOTFILES/.gitconfig"
 ln -s "$DOTFILES/.mpdconf"
-ln -s "$DOTFILES/terminalrc" ".config/Terminal"
 ln -s "$DOTFILES/.tmux.conf"
 ln -s "$DOTFILES/.vimrc"
+ln -s "$DOTFILES/.bash_aliases"
+ln -s "$DOTFILES/mpvconfig" ".mpv/config"
+
+# Link X11 related
 ln -s "$DOTFILES/.xinitrc" ".xsession"
 ln -s "$DOTFILES/.xmobarrc.$(hostname)" ".xmobarrc"
+ln -s "$DOTFILES/.xbindkeysrc"
 ln -s "$DOTFILES/xmonad.hs" ".xmonad/"
-ln -s "$DOTFILES/.bash_aliases"
+ln -s "$DOTFILES/terminalrc" ".config/Terminal"
+
+# Link ~/bin/*
 ln -s "$DOTFILES/bin/togglemute.sh" "bin/"
 ln -s "$DOTFILES/bin/single_crc.sh" "bin/"
 ln -s "$DOTFILES/bin/all_crc.sh" "bin/"
 ln -s "$DOTFILES/bin/is_number" "bin/"
 ln -s "$DOTFILES/bin/passman.sh" "bin/"
-ln -s "$DOTFILES/.xbindkeysrc"
-ln -s "$DOTFILES/mpvconfig" ".mpv/config"
 
+# Vim plugins
 pip install --user git+git://github.com/Lokaltog/powerline
 mkdir -p ".fonts"
 cd ".fonts"
