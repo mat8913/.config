@@ -22,6 +22,7 @@ ln -s "$DOTFILES/mpvconfig" ".mpv/config"
 ln -s "$DOTFILES/.xinitrc" ".xsession"
 ln -s "$DOTFILES/.xmobarrc.$(hostname)" ".xmobarrc"
 ln -s "$DOTFILES/.xbindkeysrc"
+ln -s "$DOTFILES/.Xresources"
 ln -s "$DOTFILES/xmonad.hs" ".xmonad/"
 ln -s "$DOTFILES/terminalrc" ".config/Terminal"
 
