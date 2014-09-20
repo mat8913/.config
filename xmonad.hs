@@ -1,5 +1,4 @@
 import XMonad
-import XMonad.Layout.NoBorders
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Util.Run(spawnPipe)
@@ -7,12 +6,18 @@ import XMonad.Util.EZConfig(additionalKeys)
 import XMonad.Layout.FixedColumn
 import XMonad.Layout.BoringWindows
 import XMonad.Layout.SubLayouts
+import XMonad.Layout.NoBorders
 import System.IO
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
 
-varLayout = layoutHook defaultConfig ||| subLayout [1,0] (Full) (FixedColumn 1 1 85 10)
+varLayout = fullLayout ||| tallLayout ||| codingLayout ||| Full
+  where
+    fullLayout = avoidStruts Full
+    tallLayout = avoidStruts $ Tall (1) (3/100) (1/2)
+    codingLayout = avoidStruts $ subLayout [1,0] (Full) (FixedColumn 1 1 85 10)
+
 varKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList [
    ((modm .|. controlMask, xK_m), withFocused (sendMessage . MergeAll))
  , ((modm .|. controlMask, xK_u), withFocused (sendMessage . UnMerge))
@@ -25,6 +30,6 @@ main = do
         { manageHook = manageDocks <+> manageHook defaultConfig
         , focusedBorderColor = "#268AD2"
         , normalBorderColor = "#002B36"
-        , layoutHook = boringWindows $ smartBorders ( avoidStruts varLayout ||| Full )
+        , layoutHook = boringWindows $ smartBorders $ varLayout
         , keys = varKeys <+> keys defaultConfig
         }
