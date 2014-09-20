@@ -16,7 +16,7 @@ varLayout = fullLayout ||| tallLayout ||| codingLayout ||| Full
   where
     fullLayout = avoidStruts Full
     tallLayout = avoidStruts $ Tall (1) (3/100) (1/2)
-    codingLayout = avoidStruts $ subLayout [1,0] (Full) (FixedColumn 1 1 85 10)
+    codingLayout = avoidStruts $ subLayout [1,0] (Full) (FixedColumn 1 1 84 10)
 
 varKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList [
    ((modm .|. controlMask, xK_m), withFocused (sendMessage . MergeAll))
