@@ -1,4 +1,4 @@
 # Write your default config options here!
 [default]
 vo=opengl-hq,opengl,xv
-cache=10000
+cache=1000000
