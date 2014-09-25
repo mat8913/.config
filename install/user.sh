@@ -32,6 +32,7 @@ ln -s "$DOTFILES/bin/single_crc.sh" "bin/"
 ln -s "$DOTFILES/bin/all_crc.sh" "bin/"
 ln -s "$DOTFILES/bin/is_number" "bin/"
 ln -s "$DOTFILES/bin/passman.sh" "bin/"
+ln -s "$DOTFILES/bin/remove_underscores.sh" "bin/"
 
 # Vim plugins
 pip install --user git+git://github.com/Lokaltog/powerline
