@@ -38,6 +38,7 @@ pip install --user git+git://github.com/Lokaltog/powerline
 mkdir -p ".fonts"
 cd ".fonts"
 wget "https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf" -O "PowerlineSymbols.otf"
+wget "https://github.com/Lokaltog/powerline-fonts/raw/master/Inconsolata/Inconsolata%20for%20Powerline.otf" -O "Inconsolata for Powerline.otf"
 fc-cache -vf "$HOME"/.fonts
 mkdir -p "$HOME"/.config/fontconfig/conf.d/
 cd "$HOME"/.config/fontconfig/conf.d/
