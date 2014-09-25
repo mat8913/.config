@@ -11,3 +11,6 @@ xscreensaver
 trayer
 gmrun
 xbindkeys
+rxvt-unicode-256color
+pavucontrol
+pulseaudio
