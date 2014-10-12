@@ -32,5 +32,17 @@ while ! check_input "$CHOICE" "$PASSLIST_LINES"; do
 	read -p "Which password? " CHOICE
 done
 
-head -n $CHOICE "$1" | tail -n 1
-while ! getpasswd.sh "$(head -n $CHOICE "$1" | tail -n 1)" ; do true; done
+FULL_LINE="$(head -n $CHOICE "$1" | tail -n 1)"
+echo "$FULL_LINE" | grep -q "|"
+if [ $? -eq 0 ]; then
+	WEBSITE="$(echo "$FULL_LINE" | cut -d "|" -f 1 | head -c -2)"
+	PIPE="$(echo "$FULL_LINE" | cut -d "|" -f 2-)"
+	echo "$WEBSITE"
+	echo "$PIPE"
+	while ! getpasswd.sh "$WEBSITE" $PIPE ; do true; done
+else
+	WEBSITE="$FULL_LINE"
+	PIPE=""
+	echo "$WEBSITE"
+	while ! getpasswd.sh "$WEBSITE" ; do true; done
+fi
