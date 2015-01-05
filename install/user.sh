@@ -27,7 +27,7 @@ ln -s "$DOTFILES/xmonad.hs" ".xmonad/"
 ln -s "$DOTFILES/terminalrc" ".config/Terminal"
 
 # Link ~/bin/*
-for i in "$DOTFILES/bin*"; do
+for i in "$DOTFILES/bin/"*; do
 	ln -s "$i" "bin/"
 done
 
