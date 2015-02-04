@@ -11,6 +11,7 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 export MPD_HOST="$HOME"/.mpd/socket
+export TEXINPUTS=:/home/matthew/latex-templates/tex
 
 alias tmux="tmux -2"
 alias colcor="redshift -l -33.9900016784668:150.884429931641"
