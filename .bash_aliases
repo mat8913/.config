@@ -19,6 +19,7 @@ alias hibernate="dbus-send --system --print-reply --dest="org.freedesktop.UPower
 alias suspend="dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Suspend"
 alias httpd-python="python -m SimpleHTTPServer"
 alias grep="grep --color=auto"
+alias dcmake="cmake -DCMAKE_BUILD_TYPE=DEBUG"
 
 DEBEMAIL="mbekkema97@gmail.com"
 DEBFULLNAME="Matthew Bekkema"
