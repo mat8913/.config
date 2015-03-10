@@ -38,7 +38,7 @@ autocmd FileType mail setlocal textwidth=80 spell
 " Plugins
 call pathogen#infect()
 
-set directory=~/.vim/tmp
+set directory=~/.vim/tmp//
 
 let g:syntastic_mode_map = { 'mode': 'active' }
 let g:syntastic_c_checkers = ['gcc']
