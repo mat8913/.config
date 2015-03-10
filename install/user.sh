@@ -83,3 +83,10 @@ fi
 cd "gundo.vim"
 git pull
 cd "$HOME/.vim/bundle"
+
+if [ ! -d "vim-obsession" ]; then\
+	git clone "git://github.com/tpope/vim-obsession.git"
+fi
+cd "vim-obsession"
+git pull
+cd "$HOME/.vim/bundle"
