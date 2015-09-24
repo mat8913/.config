@@ -10,6 +10,10 @@ if [ -d "$HOME/.local/bin" ] ; then
 	PATH="$HOME/.local/bin:$PATH"
 fi
 
+if [ -d "$HOME/.cabal/bin" ] ; then
+	PATH="$HOME/.cabal/bin:$PATH"
+fi
+
 export MPD_HOST="$HOME"/.mpd/socket
 export TEXINPUTS=:/home/matthew/latex-templates/tex
 
