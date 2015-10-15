@@ -45,7 +45,7 @@ cd "$HOME"
 
 cd ".vim"
 if [ ! -d "vim-pathogen" ]; then\
-	git clone "git://github.com/tpope/vim-pathogen.git"
+	git clone "https://github.com/tpope/vim-pathogen.git"
 fi
 cd "vim-pathogen"
 git pull
@@ -57,35 +57,35 @@ fi
 cd "bundle"
 
 if [ ! -d "vim-colors-solarized" ]; then\
-	git clone "git://github.com/altercation/vim-colors-solarized.git"
+	git clone "https://github.com/altercation/vim-colors-solarized.git"
 fi
 cd "vim-colors-solarized"
 git pull
 cd "$HOME/.vim/bundle"
 
 if [ ! -d "syntastic" ]; then\
-	git clone "git://github.com/scrooloose/syntastic.git"
+	git clone "https://github.com/scrooloose/syntastic.git"
 fi
 cd "syntastic"
 git pull
 cd "$HOME/.vim/bundle"
 
 if [ ! -d "vim-fugitive" ]; then\
-	git clone "git://github.com/tpope/vim-fugitive"
+	git clone "https://github.com/tpope/vim-fugitive"
 fi
 cd "vim-fugitive"
 git pull
 cd "$HOME/.vim/bundle"
 
 if [ ! -d "gundo.vim" ]; then\
-	git clone "git://github.com/sjl/gundo.vim"
+	git clone "https://github.com/sjl/gundo.vim"
 fi
 cd "gundo.vim"
 git pull
 cd "$HOME/.vim/bundle"
 
 if [ ! -d "vim-obsession" ]; then\
-	git clone "git://github.com/tpope/vim-obsession.git"
+	git clone "https://github.com/tpope/vim-obsession.git"
 fi
 cd "vim-obsession"
 git pull
