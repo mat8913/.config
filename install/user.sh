@@ -32,7 +32,7 @@ for i in "$DOTFILES/bin/"*; do
 done
 
 # Vim plugins
-pip install --user git+git://github.com/Lokaltog/powerline
+pip install --user powerline-status
 mkdir -p ".fonts"
 cd ".fonts"
 wget "https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf" -O "PowerlineSymbols.otf"
