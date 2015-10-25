@@ -14,3 +14,4 @@ xbindkeys
 rxvt-unicode-256color
 pavucontrol
 pulseaudio
+xss-lock

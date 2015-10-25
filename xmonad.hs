@@ -1,13 +1,9 @@
 import XMonad
-import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
-import XMonad.Util.Run(spawnPipe)
-import XMonad.Util.EZConfig(additionalKeys)
 import XMonad.Layout.FixedColumn
 import XMonad.Layout.BoringWindows
 import XMonad.Layout.SubLayouts
 import XMonad.Layout.NoBorders
-import System.IO
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
@@ -25,8 +21,7 @@ varKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList [
  , ((modm, xK_k), onGroup W.focusUp')
  , ((modm, xK_Tab), focusDown) ]
 
-main = do
-    xmonad $ defaultConfig
+main = xmonad $ defaultConfig
         { manageHook = manageDocks <+> manageHook defaultConfig
         , focusedBorderColor = "#268AD2"
         , normalBorderColor = "#002B36"
