@@ -56,6 +56,13 @@ nnoremap <F5> :GundoToggle<CR>
 set guioptions-=L
 set guioptions-=r
 
+if has("gui_running")
+	set lines=999999
+	set columns=80
+	set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12
+	colorscheme delek
+endif
+
 " Plugin list:
 "   * Pathogen
 "   * Syntastic
