@@ -14,6 +14,13 @@ if [ -d "$HOME/.cabal/bin" ] ; then
 	PATH="$HOME/.cabal/bin:$PATH"
 fi
 
+for i in "$HOME"/.gem/ruby/*/bin; do
+	if [ -d "$i" ] ; then
+		PATH="$i:$PATH"
+	fi
+done
+
+
 export MPD_HOST="$HOME"/.mpd/socket
 export TEXINPUTS=:/home/matthew/latex-templates/tex
 
