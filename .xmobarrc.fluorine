@@ -1,19 +1,33 @@
-Config { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
-       , bgColor = "black"
-       , fgColor = "grey"
-       , position = TopSize C 100 26
-       , lowerOnStart = True
-       , commands = [ Run Network "wlan0" ["-L","0","-H","32","--normal","green","--high","red"] 10
-                    , Run MultiCpu ["-t","CPU0: <total0>% CPU1: <total1>%","-L","3","-H","50","--normal","green","--high","red"] 10
-                    , Run Memory ["-t","MemFree: <free>MB"] 10
-                    , Run Swap [] 10
-                    , Run Date "%a %b %_d %Y %I:%M:%S%p" "date" 10
-                    , Run Com "acpi" ["-b"] "battery" 10
-                    , Run Com "/home/matthew/bin/fan_speed.sh" [""] "fan" 10
-                    , Run Kbd [("us(dvorak)", "dvorak"), ("us", "us")]
-                    , Run DiskU [("/", "Disk: <free>")] [] 20
-                    ]
-       , sepChar = "%"
-       , alignSep = "}{"
-       , template = "%multicpu% | %memory% * %swap% * %fan% | %disku% | %wlan0% | %kbd% }{ %battery% | <fc=#ee9a00>%date%</fc>"
-       }
+Config {
+
+      font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
+    , bgColor = "black"
+    , fgColor = "grey"
+    , position = TopSize C 100 26
+    , lowerOnStart = True
+    , sepChar = "%"
+    , alignSep = "}{"
+    , template = "%multicpu% | %coretemp% | %memory% * %swap% | %eth0%%wlan0% | %kbd% }{ %battery% | <fc=#ee9a00>%date%</fc>"
+    , commands =
+        [ Run Network "eth0" ["-L","0","-H","32","--normal","green","--high","red"] 10
+        , Run Network "wlan0" ["-L","0","-H","32","--normal","green","--high","red"] 10
+        , Run MultiCpu ["-t","CPU0: <total0>% CPU1: <total1>%","-L","3","-H","50","--normal","green","--high","red"] 10
+        , Run Memory ["-t","MemFree: <free>MB"] 10
+        , Run Swap [] 10
+        , Run Date "%a %b %_d %Y %I:%M:%S%p" "date" 10
+        , Run Battery ["-t", "Batt: <acstatus>, <left>% (<timeleft>)", "-L", "10", "-H", "90", "-l", "red", "-h", "green", "--"
+                           , "-o" , "Discharging"
+                           , "-O" , "<fc=#dAA520>Charging</fc>"
+                           , "-i" , "<fc=#006000>Charged</fc>"
+                           , "-f" , "ACAD/online"
+                 ] 10
+        , Run Kbd [("us(dvorak)", "dvorak"), ("us", "us")]
+        , Run CoreTemp [ "--template" , "Temp: <core0>°C|<core1>°C|<core2>°C"
+                 , "--Low"      , "65"
+                 , "--High"     , "86"
+                 , "--low"      , "green"
+                 , "--normal"   , "darkorange"
+                 , "--high"     , "red"
+                 ] 10
+        ]
+}
