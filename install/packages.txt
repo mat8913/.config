@@ -4,7 +4,6 @@ xmobar
 tmux
 vim-gtk
 task
-upower
 python-pip
 alsa-utils
 xscreensaver
