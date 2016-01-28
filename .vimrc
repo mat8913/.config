@@ -63,6 +63,11 @@ if has("gui_running")
 	set background=light
 endif
 
+if filereadable(".noswap")
+	set noswapfile
+endif
+
+
 " Plugin list:
 "   * Pathogen
 "   * Syntastic
