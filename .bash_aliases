@@ -30,7 +30,7 @@ alias hibernate="dbus-send --system --print-reply --dest="org.freedesktop.UPower
 alias suspend="dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Suspend"
 alias httpd-python="python3 -m http.server"
 alias grep="grep --color=auto"
-alias ls="ls --color=auto"
+alias ls="ls --color=auto --group-directories-first"
 alias dcmake="cmake -DCMAKE_BUILD_TYPE=DEBUG"
 
 for i in ~/.muttrc.*; do
