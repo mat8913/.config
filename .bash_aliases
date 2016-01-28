@@ -33,6 +33,11 @@ alias grep="grep --color=auto"
 alias ls="ls --color=auto"
 alias dcmake="cmake -DCMAKE_BUILD_TYPE=DEBUG"
 
+for i in ~/.muttrc.*; do
+	MUTTCONF="${i#$HOME/.muttrc.}"
+	alias mutt."$MUTTCONF"="mutt -F ~/.muttrc.$MUTTCONF"
+done
+
 DEBEMAIL="mbekkema97@gmail.com"
 DEBFULLNAME="Matthew Bekkema"
 export DEBEMAIL DEBFULLNAME
