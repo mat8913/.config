@@ -59,8 +59,8 @@ set guioptions-=r
 if has("gui_running")
 	set lines=999999
 	set columns=80
-	set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12
-	colorscheme delek
+	set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 14
+	set background=light
 endif
 
 " Plugin list:
