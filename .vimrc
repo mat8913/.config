@@ -36,6 +36,7 @@ autocmd FileType wml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 autocmd FileType gitcommit setlocal textwidth=72 spell
 autocmd FileType mail setlocal textwidth=80 spell
 autocmd FileType text setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab spell
+autocmd FileType cpp setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 
 " Plugins
 call pathogen#infect()
@@ -44,6 +45,7 @@ set directory=~/.vim/tmp//
 
 let g:syntastic_mode_map = { 'mode': 'active' }
 let g:syntastic_c_checkers = ['gcc']
+let g:syntastic_cpp_compiler_options = "-std=c++11"
 let g:syntastic_d_include_dirs = [ '~/d/Derelict3/import/', 'src' ]
 
 set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim/
