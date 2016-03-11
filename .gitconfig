@@ -20,4 +20,4 @@
 	untracked = cyan
 [push] default = simple
 [core]
-	autocrlf = input
+	autocrlf = off
