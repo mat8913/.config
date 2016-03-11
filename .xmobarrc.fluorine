@@ -1,6 +1,5 @@
-Config {
-
-      font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
+Config
+    { font = "-misc-fixed-*-*-*-*-10-*-*-*-*-*-*-*"
     , bgColor = "black"
     , fgColor = "grey"
     , position = TopSize C 100 26
@@ -15,19 +14,19 @@ Config {
         , Run Memory ["-t","MemFree: <free>MB"] 10
         , Run Swap [] 10
         , Run Date "%a %b %_d %Y %I:%M:%S%p" "date" 10
-        , Run Battery ["-t", "Batt: <acstatus>, <left>% (<timeleft>)", "-L", "10", "-H", "90", "-l", "red", "-h", "green", "--"
-                           , "-o" , "Discharging"
-                           , "-O" , "<fc=#dAA520>Charging</fc>"
-                           , "-i" , "<fc=#006000>Charged</fc>"
-                           , "-f" , "ACAD/online"
-                 ] 10
-        , Run Kbd [("us(dvorak)", "dvorak"), ("us", "us")]
+        , Run Battery [ "-t", "Batt: <acstatus>, <left>% (<timeleft>)", "-L", "10", "-H", "90", "-l", "red", "-h", "green", "--"
+                      , "-o", "Discharging"
+                      , "-O", "<fc=#dAA520>Charging</fc>"
+                      , "-i", "<fc=#006000>Charged</fc>"
+                      , "-f", "ACAD/online"
+                      ] 10
+        , Run Kbd [ ("us(dvorak)", "dvorak"), ("us", "us") ]
         , Run CoreTemp [ "--template" , "Temp: <core0>°C|<core1>°C|<core2>°C"
-                 , "--Low"      , "65"
-                 , "--High"     , "86"
-                 , "--low"      , "green"
-                 , "--normal"   , "darkorange"
-                 , "--high"     , "red"
-                 ] 10
+                       , "--Low"      , "65"
+                       , "--High"     , "86"
+                       , "--low"      , "green"
+                       , "--normal"   , "darkorange"
+                       , "--high"     , "red"
+                       ] 10
         ]
-}
+    }
