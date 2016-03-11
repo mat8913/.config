@@ -71,3 +71,6 @@ URxvt*color15:                 S_base3
 
 URxvt.font:                    xft:Ubuntu\ Mono\ derivative\ Powerline:pixelsize=16
 URxvt.scrollBar:               false
+
+URxvt.iso14755:                false
+URxvt.iso14755_52:             false
