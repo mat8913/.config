@@ -37,6 +37,7 @@ autocmd FileType gitcommit setlocal textwidth=72 spell
 autocmd FileType mail setlocal textwidth=80 spell
 autocmd FileType text setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab spell
 autocmd FileType cpp setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+autocmd FileType java setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 
 " Plugins
 call pathogen#infect()
