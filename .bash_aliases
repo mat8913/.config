@@ -20,6 +20,11 @@ for i in "$HOME"/.gem/ruby/*/bin; do
 	fi
 done
 
+if [ -n "$TMUX" ] ; then
+	TERM=screen-256color
+	export TERM
+fi
+
 
 export MPD_HOST="$HOME"/.mpd/socket
 export TEXINPUTS=:/home/matthew/latex-templates/tex
