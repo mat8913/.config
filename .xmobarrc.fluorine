@@ -6,7 +6,7 @@ Config
     , lowerOnStart = True
     , sepChar = "%"
     , alignSep = "}{"
-    , template = "%multicpu% | %coretemp% | %memory% * %swap% | %eth0%%wlan0% | %kbd% }{ %battery% | <fc=#ee9a00>%date%</fc>"
+    , template = "%multicpu% | %coretemp% | %cat0%RPM | %memory% * %swap% | %eth0%%wlan0% | %kbd% }{ %battery% | <fc=#ee9a00>%date%</fc>"
     , commands =
         [ Run Network "eth0" ["-L","0","-H","32","--normal","green","--high","red"] 10
         , Run Network "wlan0" ["-L","0","-H","32","--normal","green","--high","red"] 10
@@ -21,12 +21,13 @@ Config
                       , "-f", "ACAD/online"
                       ] 10
         , Run Kbd [ ("us(dvorak)", "dvorak"), ("us", "us") ]
-        , Run CoreTemp [ "--template" , "Temp: <core0>°C|<core1>°C|<core2>°C"
+        , Run CoreTemp [ "--template" , "Temp: <core1>°C|<core2>°C"
                        , "--Low"      , "65"
                        , "--High"     , "86"
                        , "--low"      , "green"
                        , "--normal"   , "darkorange"
                        , "--high"     , "red"
                        ] 10
+        , Run CatInt 0 "/sys/devices/platform/thinkpad_hwmon/fan1_input" [] 50
         ]
     }
