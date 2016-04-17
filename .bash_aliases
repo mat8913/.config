@@ -48,3 +48,13 @@ DEBFULLNAME="Matthew Bekkema"
 export DEBEMAIL DEBFULLNAME
 export EDITOR=vim
 alias vi=vim
+
+echo "Previous comments:"
+echo
+grep -E '#.*$' "$HISTFILE"
+echo
+echo
+task due.before:$(date -d 'now + 2 weeks + 1 day' -I) or +ACTIVE
+echo
+echo "Current session on $(date '+%A %-d %B  %I:%M:%S%p %Z %Y'):"
+echo
