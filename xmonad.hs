@@ -23,8 +23,9 @@ varKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList [
 
 main = xmonad $ defaultConfig
         { manageHook = manageDocks <+> manageHook defaultConfig
+        , handleEventHook = docksEventHook <+> handleEventHook defaultConfig
+        , layoutHook = boringWindows $ smartBorders $ varLayout
         , focusedBorderColor = "#268AD2"
         , normalBorderColor = "#002B36"
-        , layoutHook = boringWindows $ smartBorders $ varLayout
         , keys = varKeys <+> keys defaultConfig
         }
