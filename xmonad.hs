@@ -11,10 +11,10 @@ import qualified Data.Map as M
 varLayout = fullLayout ||| tallLayout ||| codingLayout ||| Full
   where
     fullLayout = avoidStruts Full
-    tallLayout = avoidStruts $ Tall (1) (3/100) (1/2)
-    codingLayout = avoidStruts $ subLayout [1,0] (Full) (FixedColumn 1 1 84 10)
+    tallLayout = avoidStruts $ Tall 1 (3/100) (1/2)
+    codingLayout = avoidStruts $ subLayout [1,0] Full (FixedColumn 1 1 84 10)
 
-varKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList [
+varKeys conf@XConfig {XMonad.modMask = modm} = M.fromList [
    ((modm .|. controlMask, xK_m), withFocused (sendMessage . MergeAll))
  , ((modm .|. controlMask, xK_u), withFocused (sendMessage . UnMerge))
  , ((modm, xK_j), onGroup W.focusDown')
