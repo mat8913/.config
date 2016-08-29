@@ -1,4 +1,2 @@
-#!/bin/bash
-for i in "$@"; do
-	mv "$i" "$(echo "$i" | sed 's/_/ /g')"
-done
+#!/bin/sh
+exec rename 's/_/ /g' "$@"
