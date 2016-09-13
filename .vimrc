@@ -32,11 +32,14 @@ autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab 
 autocmd FileType haskell setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab textwidth=80
 autocmd FileType perl setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+autocmd FileType css setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+autocmd FileType javascript setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 autocmd FileType wml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 autocmd FileType gitcommit setlocal textwidth=72 spell
 autocmd FileType mail setlocal textwidth=80 spell
 autocmd FileType text setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab spell
 autocmd FileType cpp setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+autocmd FileType rust setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 autocmd FileType java setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 
 " Plugins
