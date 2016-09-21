@@ -1,24 +1,17 @@
-if [ -d "$HOME/bin" ] ; then
-	PATH="$HOME/bin:$PATH"
-fi
+function add_to_path()
+{
+	for i in "$@"; do
+		if [ -d "$i" ] ; then
+			PATH="$i:$PATH"
+		fi
+	done
+}
 
-if [ -d "$HOME/local/bin" ] ; then
-	PATH="$HOME/local/bin:$PATH"
-fi
-
-if [ -d "$HOME/.local/bin" ] ; then
-	PATH="$HOME/.local/bin:$PATH"
-fi
-
-if [ -d "$HOME/.cabal/bin" ] ; then
-	PATH="$HOME/.cabal/bin:$PATH"
-fi
-
-for i in "$HOME"/.gem/ruby/*/bin; do
-	if [ -d "$i" ] ; then
-		PATH="$i:$PATH"
-	fi
-done
+add_to_path "$HOME/bin" \
+	"$HOME/local/bin" \
+	"$HOME/.local/bin" \
+	"$HOME/.cabal/bin" \
+	"$HOME"/.gem/ruby/*/bin \
 
 if [ -n "$TMUX" ] ; then
 	TERM=screen-256color
