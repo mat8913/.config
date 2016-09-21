@@ -1,3 +1,4 @@
+export _JAVA_AWT_WM_NONREPARENTING=1
 xbindkeys
 setxkbmap -layout us,dvorak -option "" -option caps:backspace -option grp:shifts_toggle
 xmobar &
