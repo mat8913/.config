@@ -30,6 +30,7 @@ autocmd FileType make setlocal noexpandtab
 autocmd FileType markdown setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab textwidth=80 spell
 autocmd FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab textwidth=79
 autocmd FileType haskell setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab textwidth=80
+autocmd FileType cabal setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab textwidth=80
 autocmd FileType perl setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 autocmd FileType css setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
