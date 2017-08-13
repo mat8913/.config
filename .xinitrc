@@ -6,4 +6,4 @@ stack exec --package xmobar -- xmobar &
 xscreensaver &
 xss-lock -- xscreensaver-command --lock &
 trayer --edge top --widthtype request --alpha 0 --transparent true --tint 0x000000 &
-exec "$HOME/.xmonad/xmonad-x86_64-linux"
+exec xmonad
