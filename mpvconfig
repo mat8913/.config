@@ -1,4 +1,8 @@
 # Write your default config options here!
 [default]
-vo=opengl-hq,opengl,xv
-cache=10000
+profile=opengl-hq
+hwdec=vaapi
+
+video-sync=display-resample
+interpolation
+tscale=oversample
