@@ -4,3 +4,7 @@ hwdec=vaapi
 video-sync=display-resample
 interpolation
 tscale=oversample
+
+[my-lq]
+vo=opengl
+hwdec=vaapi
