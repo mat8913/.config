@@ -1,8 +1,6 @@
-# Write your default config options here!
-[default]
+[my-hq]
 profile=opengl-hq
 hwdec=vaapi
-
 video-sync=display-resample
 interpolation
 tscale=oversample
