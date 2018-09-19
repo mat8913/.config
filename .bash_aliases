@@ -13,11 +13,6 @@ alias httpd-python="python3 -m http.server"
 alias grep="grep --color=auto"
 alias ls="ls --color=auto --group-directories-first"
 
-for i in ~/.muttrc.*; do
-	MUTTCONF="${i#$HOME/.muttrc.}"
-	alias mutt."$MUTTCONF"="mutt -F ~/.muttrc.$MUTTCONF"
-done
-
 export EDITOR=vim
 alias vi=vim
 
