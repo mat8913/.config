@@ -12,16 +12,12 @@ alias colcor="redshift -l -33.9900016784668:150.884429931641"
 alias httpd-python="python3 -m http.server"
 alias grep="grep --color=auto"
 alias ls="ls --color=auto --group-directories-first"
-alias dcmake="cmake -DCMAKE_BUILD_TYPE=DEBUG"
 
 for i in ~/.muttrc.*; do
 	MUTTCONF="${i#$HOME/.muttrc.}"
 	alias mutt."$MUTTCONF"="mutt -F ~/.muttrc.$MUTTCONF"
 done
 
-DEBEMAIL="mbekkema97@gmail.com"
-DEBFULLNAME="Matthew Bekkema"
-export DEBEMAIL DEBFULLNAME
 export EDITOR=vim
 alias vi=vim
 
