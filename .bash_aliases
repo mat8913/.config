@@ -1,18 +1,3 @@
-function add_to_path()
-{
-	for i in "$@"; do
-		if [ -d "$i" ] ; then
-			PATH="$i:$PATH"
-		fi
-	done
-}
-
-add_to_path "$HOME/bin" \
-	"$HOME/local/bin" \
-	"$HOME/.local/bin" \
-	"$HOME/.cabal/bin" \
-	"$HOME"/.gem/ruby/*/bin \
-
 if [ -n "$TMUX" ] ; then
 	TERM=screen-256color
 	export TERM
