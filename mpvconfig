@@ -8,3 +8,6 @@ tscale=oversample
 [my-lq]
 vo=opengl
 hwdec=vaapi
+
+[default]
+include=~~/mpv.conf.local
