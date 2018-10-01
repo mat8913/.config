@@ -1,3 +1,9 @@
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
 if [ -n "$TMUX" ] ; then
 	TERM=screen-256color
 	export TERM
