@@ -15,6 +15,12 @@ shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 
+# enable color support of ls and also add handy aliases
+if command -v dircolors >/dev/null 2>&1; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+fi
+
 if [ -n "$TMUX" ] ; then
 	TERM=screen-256color
 	export TERM
